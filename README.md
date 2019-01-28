@@ -1,25 +1,20 @@
-# ReduxSimpleStarter
+# About this project
 
-Interested in learning [Redux](https://www.udemy.com/react-redux/)?
 
-### Getting Started
 
-There are two methods for getting started with this repo.
-
-#### Familiar with Git?
-Checkout this repo, install dependencies, then start the gulp process with the following:
-
+To dispatch an action in component, you need to first bind an action creator(on the right) to a React `props`(on the left). Finally you also need to use the `connect()`.
 ```
-> git clone https://github.com/StephenGrider/ReduxSimpleStarter.git
-> cd ReduxSimpleStarter
-> npm install
-> npm start
+function mapDispatchtoProps(dispatch){
+  return bindActionCreators({selectBook: selectBook},dispatch);
+}
+```
+so that you can use it like this
+```
+this.props.selectBook(book)
 ```
 
-#### Not Familiar with Git?
-Click [here](https://github.com/StephenGrider/ReactStarter/releases) then download the .zip file.  Extract the contents of the zip file, then open your terminal, change to the project directory, and:
-
+# Available Scripts
 ```
-> npm install
-> npm start
+npm install
+npm start
 ```
